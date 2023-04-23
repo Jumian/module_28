@@ -15,4 +15,5 @@ public:
     static Train* deque();
     static int queCur;
     static std::vector<Train*> que;
+    ~Station() { delete Instance; }
 };

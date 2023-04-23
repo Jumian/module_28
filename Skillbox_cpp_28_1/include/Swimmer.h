@@ -8,10 +8,10 @@ protected:
     std::chrono::high_resolution_clock::time_point stop_time;
     std::chrono::duration<double,std::chrono::seconds::period> time_past;
 public:
-    void start(std::chrono::high_resolution_clock::time_point start);
+    virtual void start(std::chrono::high_resolution_clock::time_point start) = 0;
 };
 
-class Swimmer : public Sportsman{
+class Swimmer :virtual public  Sportsman{
 public:
     Swimmer(int id, double speed);
     void update();

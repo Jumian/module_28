@@ -52,5 +52,3 @@ void Swimmer::start(std::chrono::high_resolution_clock::time_point start) {
 void Swimmer::print_time() {
     Inputs::print("Swimmer #" +std::to_string(id) +" time: "+ std::to_string(time_past.count()) + " s\n");
 }
-
-void Sportsman::start(std::chrono::high_resolution_clock::time_point start) {}

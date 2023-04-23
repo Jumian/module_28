@@ -5,8 +5,8 @@ std::mutex Inputs::terminal_access;
 double Inputs::inputDouble(const std::string& prompt){
     terminal_access.lock();
     std::string input=" ";
-    bool notNumber=true;
-    while(notNumber) {
+  
+    while(true) {
         std::cout << prompt;
         std::cin >> input;
         notNumber=!Validator::isNumberReal(input);
